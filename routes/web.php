@@ -36,6 +36,7 @@ use Illuminate\Support\Facades\Cache;
 
 Route::get('/{any?}', function ($file = null) {
     $clientDir = public_path('client'); // Path to the client build folder
+    // dd($clientDir);
     $indexFilePath = $clientDir. '/' . $file  . '/index.html';
 
     if (!File::exists($indexFilePath)) {
